@@ -1,0 +1,2 @@
+# training_devops_v1
+DevOpsの研修での成果物等の管理を行う
