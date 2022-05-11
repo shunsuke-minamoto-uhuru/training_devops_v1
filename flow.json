@@ -1,0 +1,94 @@
+[
+  {
+    "id": "58f7066b.774ba8",
+    "type": "tab",
+    "label": "フロー 1",
+    "disabled": false,
+    "info": ""
+  },
+  {
+    "id": "c8a7c2a.20ced4",
+    "type": "debug",
+    "z": "58f7066b.774ba8",
+    "name": "",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "false",
+    "x": 580,
+    "y": 240,
+    "wires": []
+  },
+  {
+    "id": "9abac216.a1bbf",
+    "type": "template",
+    "z": "58f7066b.774ba8",
+    "name": "",
+    "field": "payload",
+    "fieldType": "msg",
+    "format": "handlebars",
+    "syntax": "mustache",
+    "template": "hello world",
+    "output": "str",
+    "x": 340,
+    "y": 180,
+    "wires": [
+      [
+        "6a61477d.5dae88",
+        "c8a7c2a.20ced4",
+        "d237dd86.619cf"
+      ]
+    ]
+  },
+  {
+    "id": "4ebfe893.090a08",
+    "type": "http in",
+    "z": "58f7066b.774ba8",
+    "name": "",
+    "url": "/hello",
+    "method": "get",
+    "upload": false,
+    "swaggerDoc": "",
+    "x": 130,
+    "y": 180,
+    "wires": [
+      [
+        "9abac216.a1bbf"
+      ]
+    ]
+  },
+  {
+    "id": "6a61477d.5dae88",
+    "type": "http response",
+    "z": "58f7066b.774ba8",
+    "name": "",
+    "statusCode": "",
+    "headers": {},
+    "x": 580,
+    "y": 180,
+    "wires": []
+  },
+  {
+    "id": "10df942e.68d7ec",
+    "type": "LCDP-in",
+    "z": "58f7066b.774ba8",
+    "name": "",
+    "x": 120,
+    "y": 260,
+    "wires": [
+      [
+        "9abac216.a1bbf"
+      ]
+    ]
+  },
+  {
+    "id": "d237dd86.619cf",
+    "type": "LCDP-out",
+    "z": "58f7066b.774ba8",
+    "name": "",
+    "x": 580,
+    "y": 320,
+    "wires": []
+  }
+]
